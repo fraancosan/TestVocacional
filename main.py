@@ -1,8 +1,8 @@
 import streamlit as st
 import datos
 
-def mostrarDatos(tabla, indice, color = "green"):
-  st.markdown(f"**:{color}[Segun tus aptitudes deberias dedicarte a: {tabla[0]}]**")
+def mostrarDatos(tabla, indice, color = "green", tipo= "aptitudes"):
+  st.markdown(f"**:{color}[Segun tus {tipo} deberias dedicarte a: {tabla[0]}]**")
   for i in tabla[indice]:
     st.markdown(f"**:{color}[-{i}]**")
 
@@ -74,57 +74,57 @@ if submitted:
   with colInteres:
     if interes == 0:
       tabla = datos.administrativas()
-      mostrarDatos(tabla, 1)
+      mostrarDatos(tabla, 1, "green", "intereses")
 
     if interes == 1:
       tabla = datos.humanisticas()
-      mostrarDatos(tabla, 1)
+      mostrarDatos(tabla, 1, "green", "intereses")
     
     if interes == 2:
       tabla = datos.artisticas()
-      mostrarDatos(tabla, 1)
+      mostrarDatos(tabla, 1, "green", "intereses")
     
     if interes == 3:
       tabla = datos.medicina()
-      mostrarDatos(tabla, 1)
+      mostrarDatos(tabla, 1, "green", "intereses")
 
     if interes == 4:
       tabla = datos.ingenieria()
-      mostrarDatos(tabla, 1)
+      mostrarDatos(tabla, 1, "green", "intereses")
 
     if interes == 5:
       tabla = datos.defensa()
-      mostrarDatos(tabla, 1)
+      mostrarDatos(tabla, 1, "green", "intereses")
     
     if interes == 6:
       tabla = datos.ciencias()
-      mostrarDatos(tabla, 1)
+      mostrarDatos(tabla, 1, "green", "intereses")
 
   with colAptitud:
     if aptitud == 0:
       tabla = datos.administrativas()
-      mostrarDatos(tabla, 2, "orange")
+      mostrarDatos(tabla, 2, "orange", "aptitudes")
 
     if aptitud == 1:
       tabla = datos.artisticas()
-      mostrarDatos(tabla, 2, "orange")
+      mostrarDatos(tabla, 2, "orange", "aptitudes")
 
     if aptitud == 2:
       tabla = datos.artisticas()
-      mostrarDatos(tabla, 2, "orange")
+      mostrarDatos(tabla, 2, "orange", "aptitudes")
     
     if aptitud == 3:
       tabla = datos.medicina()
-      mostrarDatos(tabla, 2, "orange")
+      mostrarDatos(tabla, 2, "orange", "aptitudes")
 
     if aptitud == 4:
       tabla = datos.ingenieria()
-      mostrarDatos(tabla, 2, "orange")
+      mostrarDatos(tabla, 2, "orange", "aptitudes")
 
     if aptitud == 5:
       tabla = datos.defensa()
-      mostrarDatos(tabla, 2, "orange")
+      mostrarDatos(tabla, 2, "orange", "aptitudes")
     
     if aptitud == 6:
       tabla = datos.ciencias()
-      mostrarDatos(tabla, 2, "orange")
+      mostrarDatos(tabla, 2, "orange", "aptitudes")
