@@ -58,9 +58,16 @@ if submitted:
         aptitudes[5]+= 1
       if aptitud =="E":
         aptitudes[6]+= 1
-
-  interes = intereses.index(max(intereses))
-  aptitud = aptitudes.index(max(aptitudes))
+  
+  #Evaluo esto para que el programa no devuelva nada si es que ninguna pregunta fue contestada afirmativamente
+  if max(intereses) == 0:
+    interes = -1
+  else:
+    interes = intereses.index(max(intereses))
+  if max(aptitudes) == 0:
+    aptitud = -1
+  else:
+    aptitud = aptitudes.index(max(aptitudes))
 
   colInteres, colAptitud = st.columns(2)
   # Hacer q quede dividido en dos columnas y ver el tema de que muestre solo intereses o aptitudes dependiendo lo que toque
