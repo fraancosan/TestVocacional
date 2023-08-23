@@ -2,12 +2,14 @@ import streamlit as st
 import datos
 
 def mostrarDatos(tabla, indice, color = "green", tipo= "aptitudes"):
-  st.markdown(f"**:{color}[Segun tus {tipo} deberias dedicarte a: {tabla[0]}]**")
+  st.markdown(f"**:{color}[Segun tus {tipo} podrías dedicarte a: {tabla[0]}]**")
   for i in tabla[indice]:
     st.markdown(f"**:{color}[-{i}]**")
 
 st.set_page_config(layout="centered", page_title="Test CHASIDE",page_icon="logo.png")
 st.subheader("**:blue[Test Orientacion Vocacional CHASIDE:]**")
+st.write("**:blue[Con la finalidad de contribuir al proceso de la elección de una carrera universitaria, ponemos a disposición este test de orientación vocacional que consta de 98 preguntas relacionadas a tus intereses y aptitudes.]**")
+st.write("**:blue[Un test de orientación vocacional puede ser una herramienta útil, aunque no definitiva, para contar con una primera aproximación a la búsqueda vocacional. En base a tus respuestas, podrás tener una orientación, considerando intereses y aptitudes.]**")
 
 preguntas = datos.obtenerPreguntas()
 respuestas = []
