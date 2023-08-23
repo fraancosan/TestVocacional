@@ -2,7 +2,8 @@ import streamlit as st
 import datos
 
 def mostrarDatos(tabla, indice, color = "green", tipo= "aptitudes"):
-  st.markdown(f"**:{color}[Segun tus {tipo} podrías dedicarte a: {tabla[0]}]**")
+  st.markdown(f"**[Segun tus {tipo} podrías dedicarte a:**")
+  st.markdown(f"**:{color}[{tabla[0]}]**")
   for i in tabla[indice]:
     st.markdown(f"**:{color}[-{i}]**")
 
