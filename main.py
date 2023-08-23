@@ -7,6 +7,13 @@ def mostrarDatos(tabla, indice, color = "green", tipo= "aptitudes"):
   for i in tabla[indice]:
     st.markdown(f"**:{color}[-{i}]**")
 
+#Se pone logo
+#Asigno columnas para que la imagen quede centrada
+imagen = Image.open('logo.png')
+columna1, columna2, columna3=st.columns(3)
+with columna2:
+    st.image(imagen, width=100)
+
 st.set_page_config(layout="centered", page_title="Test CHASIDE",page_icon="logo.png")
 st.subheader("**:blue[Test Orientacion Vocacional CHASIDE:]**")
 st.write("**Con la finalidad de contribuir al proceso de la elección de una carrera universitaria, ponemos a disposición este test de orientación vocacional que consta de 98 preguntas relacionadas a tus intereses y aptitudes.**")
